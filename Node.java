@@ -6,12 +6,7 @@
         this.data=data;     //Data Part
         this.next=null;     //Refference to next node
     }
-    void insertAtEnd(int data){
-        if(
-
-            
-        )
-    }
+   
 }
 
 class Linkedl{
@@ -21,7 +16,7 @@ class Linkedl{
         n1.next=n2;
         System.out.println("First Node data:" +n1.data);
         System.out.println("First Node Next:" +n1.next);
-        System.out.println("Second Node data:" +n1.data);
+        System.out.println("Second Node data:" +n2.data);
         System.out.println("Second Node Next:" +n2.next);
 
     }

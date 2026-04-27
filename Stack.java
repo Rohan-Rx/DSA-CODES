@@ -17,7 +17,7 @@ class MyStack{
         }
         top++;
         arr[top]=data;
-        System.out.println("Data Pushed Successfully!");
+        System.out.println(data + " Pushed Successfully!");
     }
     public int pop(){
         if(top==-1){
@@ -32,6 +32,15 @@ class MyStack{
             return -1;
         }
         return arr[top];
+    }
+    public void display(){
+        if(top==-1){
+            System.out.println("Stack Underflow!.");
+        }
+       for(int i= top; i>=0; i--){
+            System.out.println(arr[i]);
+       }
+        
     }
     // public boolean isEmpty(){
     //     if(top>=0){
@@ -66,7 +75,8 @@ class Stack{
         System.out.println("1.PUSH");
         System.out.println("2.POP");
         System.out.println("3.PEEK");
-        System.out.println("4.Exit");
+        System.out.println("4.Display");
+        System.out.println("5.Exit");
         System.out.println("Enter the operation:");
         operation=sc.nextInt();
      
@@ -81,11 +91,14 @@ class Stack{
                System.out.println("Popped:"+ob1.pop());
                 break;
             case 3:
-                System.out.println("Top: "ob1.peek());
+                System.out.println("Top: "+ob1.peek());
                 break;
             case 4:
-                System.out.println("Exiting");
+                System.out.println("Elements of Stack: ");
+                ob1.display();
                 break;
+            case 5:
+                System.out.println("Exitting...");
             default:
                 System.out.println("Invalid Operation");
                 break;
@@ -95,7 +108,7 @@ class Stack{
             
     }
 
-        }while(operation < 4);
+        }while(operation < 5);
         
     }
 
